@@ -1,0 +1,12 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        git:
+#          uri: file://Users/sijune/Desktop/project/git-local-repo
+          uri: https://github.com/sijune/spring-cloud-config
