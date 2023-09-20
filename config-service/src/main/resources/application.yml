@@ -4,9 +4,20 @@ server:
 spring:
   application:
     name: config-service
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
   cloud:
     config:
       server:
         git:
 #          uri: file://Users/sijune/Desktop/project/git-local-repo
           uri: https://github.com/sijune/spring-cloud-config
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, busrefresh
