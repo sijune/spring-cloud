@@ -34,7 +34,8 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
                 .antMatchers("/error/**").permitAll()
                 .antMatchers("/actuator/**").permitAll()
                 .antMatchers("/**")
-                .hasIpAddress("192.168.168.251")
+//                .hasIpAddress("192.168.168.251")
+                .hasIpAddress("172.18.0.5")//docker network
                 .and()
                 .addFilter(getAuthenticationFilter()); //모든 요청에 대해 필터작업 하겠다
         http.headers().frameOptions().disable();
